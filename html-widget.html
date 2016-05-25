@@ -1,0 +1,221 @@
+<table id="singapore-table">
+ <tr><td class="singapore-td">&nbsp;</td></tr>      
+  <tr>
+    <td valign="top" align="center">
+        <form id="dynaFlightSearchForm" name="FlightRequirementsForm" method="get" action="https://www.singaporeair.com/bookingExternal-flow.form?" target="_blank">
+        <table id="singa-inside" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td><strong>Search Flights</strong>
+</td>
+</tr>
+          <tr>
+            <td align="right" style="font-size: 11px;font-family: Arial, Helvetica, sans-serif;">From&nbsp;</td>
+            <td><select name="ondCityCode[0].origin" tabindex="1" style="font-size: 11px;font-family: Arial, Helvetica, sans-serif;background-color:#fff;" id="origin">
+                <option value="" selected="selected">Origin</option>
+                <option value="LHR"> London Heathrow - LHR </option>
+                <option value="MAN"> Manchester - MAN </option>
+ 
+            </select></td>
+          </tr>
+          <tr>
+            <td align="right" style="font-size: 11px;font-family: Arial, Helvetica, sans-serif;">To&nbsp;</td>
+            <td><select name="ondCityCode[0].destination" tabindex="1" style="font-size: 11px;font-family: Arial, Helvetica, sans-serif;background-color:#fff;">
+          
+      <option value="SYD"> Sydney - SYD</option>
+          </select></td>
+          </tr>
+          <tr>
+            <td align="right" style="font-size: 11px;font-family: Arial, Helvetica, sans-serif;">Depart&nbsp;</td>
+            <td>
+              <script type="text/javascript"> 
+/* <![CDATA[ */
+
+document.write("<select name='ondCityCode[0].day' tabindex='1' style='width:33%;font-size: 11px;font-family: Arial, Helvetica, sans-serif;background-color:#fff;' id='dd'>");
+ 
+var currentTime = new Date();
+var month = currentTime.getMonth() ;
+var day = currentTime.getDate() + 1;
+var year = currentTime.getFullYear();
+var s = "";
+for (i=1; i<=31; i=i+1) {
+    if (i==day) {
+        s=" selected='selected'";
+        }
+    else {
+        s="";
+    };
+    if (i<10) {
+        document.write("<option value='0" + i + "'" + s + ">" + i + "</option>");
+    }
+    else {
+        document.write("<option value='" + i + "'" + s +">" + i + "</option>");
+    }
+}
+ 
+document.write("</select>");
+ 
+document.write("<select name='ondCityCode[0].month' tabindex='1' style='width:65%;font-size: 11px;font-family: Arial, Helvetica, sans-serif;background-color:#fff;'>");
+
+var months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
+var currentTime = new Date();
+var month = currentTime.getMonth();
+var day = currentTime.getDate();
+var year = currentTime.getFullYear();
+ 
+var k = month + 1;
+ 
+if (month<10) {
+    document.write("<option value='0" + k + "/" + year + "'selected='selected'>" + months[month] + " " + year + "</option>")
+}
+else {
+    document.write("<option value='" + k + "/" + year + "'selected='selected'>" + months[month] + " " + year + "</option>")
+}
+ 
+var j = month+1;
+for (i=1; i<=12; i=i+1) {
+    j = j+1;
+    if (j>12) {
+        j=1;
+        year=year+1;
+    }
+    if (j<10) {
+        document.write("<option value='0" + j + "/" + year + "'>" + months[j-1] + " " + year + "</option>");
+        }
+    else {
+        document.write("<option value='" + j + "/" + year + "'>" + months[j-1] + " " + year + "</option>");
+}
+}
+
+document.write("</select>");
+ 
+/* ]]> */
+
+            </script>
+              </td>
+          </tr>
+          <tr>
+            <td align="right" style="font-size: 11px;font-family: Arial, Helvetica, sans-serif;">Return&nbsp;</td>
+            <td>
+              <script type="text/javascript"> 
+/* <![CDATA[ */
+
+document.write("<select name='ondCityCode[1].day' tabindex='1' style='width:33%;font-size: 11px;font-family: Arial, Helvetica, sans-serif;background-color:#fff;'>");
+ 
+var currentTime = new Date();
+var month = currentTime.getMonth();
+var day = currentTime.getDate() + 1;
+var year = currentTime.getFullYear();
+var s = "";
+for (i=1; i<=31; i=i+1) {
+    if (i==day) {
+        s=" selected='selected'";
+        }
+    else {
+        s="";
+    };
+    if (i<10) {
+        document.write("<option value='0" + i + "'" + s + ">" + i + "</option>");
+    }
+    else {
+        document.write("<option value='" + i + "'" + s +">" + i + "</option>");
+    }
+}
+ 
+document.write("</select>");
+ 
+document.write("<select name='ondCityCode[1].month' tabindex='1' style='width:65%;font-size: 11px;font-family: Arial, Helvetica, sans-serif;background-color:#fff;'>");
+ 
+var months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
+var currentTime = new Date();
+var month = currentTime.getMonth()+1;
+var day = currentTime.getDate();
+var year = currentTime.getFullYear();
+ 
+if (month<10) {
+    document.write("<option value='0" + month + "/" + year + "'" + "'selected='selected'>" + months[month - 1] + " " + year + "</option>")
+}
+else {
+    document.write("<option value='" + month + "/" + year + "'" + "'selected='selected'>" + months[month -1 ] + " " + year + "</option>")
+}
+
+
+var j= month;
+for (i=1; i<=12; i=i+1) {
+    j=j+1;
+    if (j>12) {
+        j=1;
+        year=year+1;
+    }
+    if (j<10) {
+        document.write("<option value='0" + [j] + "/" + year + "'>" + months[j-1] + " " + year + "</option>");
+        }
+    else {
+        document.write("<option value='" + [j] + "/" + year + "'>" + months[j-1] + " " + year + "</option>");
+  }
+
+}
+
+document.write("</select>");
+ 
+/* ]]> */
+
+
+            </script>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3" align="center" style="font-size: 11px;font-family: Arial, Helvetica, sans-serif;text-decoration:underline;"><a href="http://www.singaporeair.com/buildTrip-flow.form" target="_blank" class="inlinelink">Stopover</a></td>
+          </tr>
+          <tr>
+            <td colspan="3"><table border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td align="right" style="font-size: 11px;font-family: Arial, Helvetica, sans-serif;">Cabin Class&nbsp;</td>
+                <td colspan="3" align="right"><select name="cabinClassCode" tabindex="1" style="width:118px;font-size: 11px;font-family: Arial, Helvetica, sans-serif;background-color:#fff;">
+                  <option value="Y" selected="selected">Economy Class</option>
+                  <option value="Y">Premium Economy</option>   <option value="J">Business Class</option>
+                  <option value="P">First or Suite</option>
+                  </select></td>
+              </tr>
+              <tr>
+                <td align="right" style="font-size: 11px;font-family: Arial, Helvetica, sans-serif;">Adults&nbsp;</td>
+                <td><select name="numAdults" tabindex="1" style="width:40px;font-size: 11px;font-family: Arial, Helvetica, sans-serif;background-color:#fff;">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                </select></td>
+                <td align="right" style="font-size: 11px;font-family: Arial, Helvetica, sans-serif;">&nbsp;Children&nbsp;</td>
+                <td align="right"><select name="numChildren" tabindex="1" style="width:40px;font-size: 11px;font-family: Arial, Helvetica, sans-serif;background-color:#fff;">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                </select></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td colspan="3" align="center">
+        <input type="hidden" name="tripType" value="R"/>
+        <input type="hidden" name="numInfant" value="0"/>
+        <input type="hidden" name="flexibleDates" value="false" />
+        <input type="hidden" name="searchType" id="searchType" value="commercial" />
+        <input type="hidden" name="affiliate_id" id="sq_de" value="11015"/>
+<br/>
+        <input type="submit" value="Book Now" class="button" id="button"/>
+</td>
+          </tr>
+       
+          
+        </table>
+        </form>
+        
+       </td>
+  </tr>
+</table>
